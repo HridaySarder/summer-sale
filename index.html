@@ -38,8 +38,8 @@
         <h3 class="text-4xl font-semibold text-[#111]">Kitchenware</h3>
         <div class="grid lg:grid-cols-3 sm:grid-cols-1 my-5 gap-6">
           <!-- card-1 -->
-        <div onclick="handlCLikBtn(this)" class="card w-96 bg-base-100 shadow-xl">
-          <figure class="px-10 pt-10">
+          <div  class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
             <img src="/images/prod1.png" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
@@ -50,12 +50,12 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
-            <h2 class="card-title">K. Accessories</h2>
-            <p>39.00 TK</p>
+            <h2 class="card-title">Home car</h2>
+            <p><span class="card-price">39.00</span> TK</p>
           </div>
         </div>
         <!-- card-2 -->
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div  class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
             <img src="/images/prod2.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -68,11 +68,11 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <h2 class="card-title">K. Accessories</h2>
-            <p>25.00 TK</p>
+            <p><span class="card-price">29.00</span> TK</p>
           </div>
         </div>
         <!-- card-3 -->
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div  class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
             <img src="/images/prod3.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -85,7 +85,7 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <h2 class="card-title">Home Cooker</h2>
-            <p>49.00 TK</p>
+            <p><span class="card-price">31.00</span> TK</p>
           </div>
         </div>
         </div>
@@ -105,7 +105,7 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <h2 class="card-title">Sports Back Cap</h2>
-            <p>49.00 TK</p>
+            <p><span>49.00 </span>TK</p>
           </div>
         </div>
         <!-- card-5 -->
@@ -122,7 +122,7 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <h2 class="card-title">Full Jersey Set</h2>
-            <p>69.00 TK</p>
+            <p><span>69.00</span> TK</p>
           </div>
         </div>
         <!-- card-6 -->
@@ -139,7 +139,7 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <h2 class="card-title">Sports cates</h2>
-            <p>159.00 TK</p>
+            <p><span>159.00</span> TK</p>
           </div>
         </div>
         </div>
@@ -150,8 +150,11 @@
         <input type="text" class="py-2" placeholder="Coupon code">
         <button class="btn bg-[#E527B2] text-xl text-white">Apply</button>
       </div>
-      <div id="" class="mt-10 bg-[#FFF] p-5 rounded-lg my-5">
-        <p class="text-2xl">Total price:</p>
+      <div class="mt-10 bg-[#FFF] p-5 rounded-lg my-5">
+        <div id="select-items" class="list-none pl-0">
+
+        </div>
+        <p id="total-price" class="text-2xl">Total price:<span id="total-price-value">0.00</span>Tk</p>
         <p class="text-2xl">Discout:</p>
         <p class="text-2xl">Total:</p>
         <!-- <button class="btn bg-[#E527B2] text-xl w-full text-white">Make Purchase</button> -->
