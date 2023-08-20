@@ -10,8 +10,8 @@
 
 let itemCount = 1;
 let total = 0;
-const cardElements = document.querySelectorAll(".card");
-cardElements.forEach((card) => {
+const cardElement = document.querySelectorAll(".card");
+cardElement.forEach((card) => {
   card.addEventListener("click", () => {
     const selectedItem = document.getElementById("select-items");
     const itemName = card.querySelector(".card-title").innerText;
@@ -23,8 +23,7 @@ cardElements.forEach((card) => {
     total += cardPrice;
     const totalPriceElement = document.getElementById("total-price-value");
     totalPriceElement.textContent = total.toFixed(2) + " ";
-
-    // console.log(itemName);
-    // console.log('Total:', total.toFixed(2));
   });
 });
+
+
