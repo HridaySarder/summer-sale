@@ -23,7 +23,7 @@ cardElement.forEach((card) => {
     total += cardPrice;
     const totalPriceElement = document.getElementById("total-price-value");
     totalPriceElement.textContent = total.toFixed(2) + " ";
+  
   });
 });
-
 
