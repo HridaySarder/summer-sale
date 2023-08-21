@@ -23,9 +23,11 @@ cardElement.forEach((card) => {
     itemCount++;
     total = total + cardPrice;
     const totalPriceElement = document.getElementById("total-price-value");
-    totalPriceElement.textContent = total.toFixed(2) + " ";
+    totalPriceElement.textContent = total.toFixed(2);
+    const discountPriceElement = document.getElementById('discount-price-value');
+
     const grandTotalPriceElement = document.getElementById('grand-total-value');
-    grandTotalPriceElement.textContent = total.toFixed(2) + " ";
+    grandTotalPriceElement.textContent = total.toFixed(2);
   });
 });
 
