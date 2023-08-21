@@ -8,6 +8,7 @@
 
 // }
 
+
 let itemCount = 1;
 let total = 0;
 const cardElement = document.querySelectorAll(".card");
@@ -20,10 +21,12 @@ cardElement.forEach((card) => {
     li.innerText = `${itemCount}. ${itemName}`;
     selectedItem.appendChild(li);
     itemCount++;
-    total += cardPrice;
+    total = total + cardPrice;
     const totalPriceElement = document.getElementById("total-price-value");
     totalPriceElement.textContent = total.toFixed(2) + " ";
-  
+    const grandTotalPriceElement = document.getElementById('grand-total-value');
+    grandTotalPriceElement.textContent = total.toFixed(2) + " ";
   });
 });
+
 
