@@ -12,12 +12,17 @@ cardElement.forEach((card) => {
     itemCount++;
     total = total + cardPrice;
     const totalPriceElement = document.getElementById("total-price-value");
-    totalPriceElement.textContent = total.toFixed(2);
+    totalPriceElement.innerText = total.toFixed(2);
     const discountPriceElement = document.getElementById(
       "discount-price-value"
     );
     const grandTotalPriceElement = document.getElementById("grand-total-value");
-    grandTotalPriceElement.textContent = total.toFixed(2);
+    grandTotalPriceElement.innerText = total.toFixed(2);
+    const button = document.getElementById('modal-btn');
+    if(total > 0){
+      button.disabled = false;
+      return total;
+    }
   });
 });
 
