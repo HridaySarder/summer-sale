@@ -1,14 +1,3 @@
-// function handleClickBtn(target){
-//   const selectedItem = document.getElementById('select-items');
-//   const itmeName = target.parentNode.childNodes[3].innerText;
-//   const li = document.createElement('li');
-//   li.innerText = itmeName;
-//   selectedItem.appendChild(li);
-//   console.log(itmeName);
-
-// }
-
-
 let itemCount = 1;
 let total = 0;
 const cardElement = document.querySelectorAll(".card");
@@ -32,7 +21,6 @@ document.getElementById('apply-btn').disabled == true;
 });
 
 function closeModal() {
-  // Clear the selected items and reset the item count
   const selectedItemList = document.getElementById("select-items");
   selectedItemList.innerHTML = "";
   itemCount = 1;
@@ -41,6 +29,18 @@ function closeModal() {
   updateTotalPriceDisplay();
   const modal = document.getElementById("my_modal_5");
   modal.close();
+}
+function updateTotalPriceDisplay() {
+  const totalPriceElement = document.getElementById('total-price-value');
+  const discountPriceElement = document.getElementById('discount-price-value');
+  const grandTotalElement = document.getElementById('total-value');
+  if(total>=200){
+  discount = total * 0.2;
+  const grandTotal = total - discount;
+  totalPriceElement.textContent = total.toFixed(2);
+  discountPriceElement.textContent = discount.toFixed(2);
+  grandTotalElement.textContent = grandTotal.toFixed(2);
+  }
 }
 
 
