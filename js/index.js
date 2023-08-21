@@ -13,16 +13,26 @@ cardElement.forEach((card) => {
     total = total + cardPrice;
     const totalPriceElement = document.getElementById("total-price-value");
     totalPriceElement.textContent = total.toFixed(2);
-    const discountPriceElement = document.getElementById('discount-price-value');
-document.getElementById('apply-btn').disabled == true;
-    const grandTotalPriceElement = document.getElementById('grand-total-value');
+    const discountPriceElement = document.getElementById(
+      "discount-price-value"
+    );
+    const grandTotalPriceElement = document.getElementById("grand-total-value");
     grandTotalPriceElement.textContent = total.toFixed(2);
   });
 });
 
 function closeModal() {
+  if (total > 0) {
+    document.getElementById("modal-btn").disabled = false;
+  }
   const selectedItemList = document.getElementById("select-items");
   selectedItemList.innerHTML = "";
+  const totalValuePrice = document.getElementById('total-price-value');
+  totalValuePrice.innerText = "0.00";
+  const discountValuePrice = document.getElementById('discount-price-value');
+  discountValuePrice.innerText = "0.00";
+  const grandTotalValuePrice = document.getElementById('grand-total-value');
+  grandTotalValuePrice.innerText = "0.00";
   itemCount = 1;
   total = 0;
   discount = 0;
@@ -31,16 +41,17 @@ function closeModal() {
   modal.close();
 }
 function updateTotalPriceDisplay() {
-  const totalPriceElement = document.getElementById('total-price-value');
-  const discountPriceElement = document.getElementById('discount-price-value');
-  const grandTotalElement = document.getElementById('total-value');
-  if(total>=200){
-  discount = total * 0.2;
-  const grandTotal = total - discount;
-  totalPriceElement.textContent = total.toFixed(2);
-  discountPriceElement.textContent = discount.toFixed(2);
-  grandTotalElement.textContent = grandTotal.toFixed(2);
+  const totalPriceElement = document.getElementById("total-price-value");
+  const discountPriceElement = document.getElementById("discount-price-value");
+  const grandTotalElement = document.getElementById("total-value");
+  if (total >= 200) {
+    discount = total * 0.2;
+    grandTotal = total - discount;
+    totalPriceElement.textContent = total.toFixed(2);
+    discountPriceElement.textContent = discount.toFixed(2);
+    grandTotalElement.textContent = grandTotal.toFixed(2);
+  }
+  else{
+    document.getElementById('apply-btn').disabled = ture;
   }
 }
-
-
