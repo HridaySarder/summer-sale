@@ -22,36 +22,30 @@ cardElement.forEach((card) => {
 });
 
 function closeModal() {
-  if (total > 0) {
-    document.getElementById("modal-btn").disabled = false;
-  }
   const selectedItemList = document.getElementById("select-items");
   selectedItemList.innerHTML = "";
-  const totalValuePrice = document.getElementById('total-price-value');
+  const totalValuePrice = document.getElementById("total-price-value");
   totalValuePrice.innerText = "0.00";
-  const discountValuePrice = document.getElementById('discount-price-value');
+  const discountValuePrice = document.getElementById("discount-price-value");
   discountValuePrice.innerText = "0.00";
-  const grandTotalValuePrice = document.getElementById('grand-total-value');
+  const grandTotalValuePrice = document.getElementById("grand-total-value");
   grandTotalValuePrice.innerText = "0.00";
   itemCount = 1;
   total = 0;
   discount = 0;
-  updateTotalPriceDisplay();
+  updateTotalPrice();
   const modal = document.getElementById("my_modal_5");
   modal.close();
 }
-function updateTotalPriceDisplay() {
+function updateTotalPrice() {
   const totalPriceElement = document.getElementById("total-price-value");
   const discountPriceElement = document.getElementById("discount-price-value");
-  const grandTotalElement = document.getElementById("total-value");
+  const grandTotalElement = document.getElementById("grand-total-value");
   if (total >= 200) {
     discount = total * 0.2;
     grandTotal = total - discount;
-    totalPriceElement.textContent = total.toFixed(2);
-    discountPriceElement.textContent = discount.toFixed(2);
-    grandTotalElement.textContent = grandTotal.toFixed(2);
-  }
-  else{
-    document.getElementById('apply-btn').disabled = ture;
+    totalPriceElement.innerText = total.toFixed(2);
+    discountPriceElement.innerText = discount.toFixed(2);
+    grandTotalElement.innerText = grandTotal.toFixed(2);
   }
 }
